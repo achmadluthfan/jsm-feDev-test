@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-primary-50 via-white to-accent-50 min-h-screen;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Modern Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-secondary {
+    @apply bg-white/90 backdrop-blur-sm hover:bg-white text-secondary-700 hover:text-secondary-800 font-semibold py-3 px-6 rounded-xl border border-secondary-200 hover:border-secondary-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-success {
+    @apply bg-gradient-to-r from-success-500 to-success-600 hover:from-success-600 hover:to-success-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-warning {
+    @apply bg-gradient-to-r from-warning-500 to-warning-600 hover:from-warning-600 hover:to-warning-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  .btn-error {
+    @apply bg-gradient-to-r from-error-500 to-error-600 hover:from-error-600 hover:to-error-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+  }
+
+  /* Modern Card Styles */
+  .card {
+    @apply bg-white/70 backdrop-blur-md rounded-2xl shadow-soft hover:shadow-hover border border-white/20 transition-all duration-300 hover:scale-[1.02];
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl shadow-glass border border-white/20 hover:bg-white/15 transition-all duration-300;
+  }
+
+  .floating-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl border border-white/40 transform hover:scale-105 transition-all duration-500 animate-float;
+  }
+
+  /* Modern Input Styles */
+  .input-field {
+    @apply w-full px-4 py-3 bg-white/80 backdrop-blur-sm border border-secondary-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent hover:border-secondary-300 transition-all duration-200 placeholder-secondary-400;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-secondary-700 mb-2;
+  }
+
+  .error-text {
+    @apply text-error-600 text-sm mt-1 font-medium;
+  }
+
+  /* Money Denomination Buttons */
+  .money-btn {
+    @apply relative overflow-hidden bg-gradient-to-r font-bold py-4 px-6 rounded-xl text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  .money-btn::before {
+    @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700;
+    content: "";
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply relative text-secondary-600 hover:text-primary-600 font-medium transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-600 hover:after:w-full after:transition-all after:duration-300;
+  }
+
+  /* Stats Card */
+  .stats-card {
+    @apply bg-gradient-to-br from-white/80 via-white/60 to-white/40 backdrop-blur-lg rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Loading Animation */
+  .loading-shimmer {
+    @apply animate-pulse bg-gradient-to-r from-secondary-200 via-secondary-100 to-secondary-200 bg-[length:400%_100%];
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+
+  /* Icon Styles */
+  .icon-bounce {
+    @apply inline-block animate-bounce-in;
+  }
+
+  /* Table Styles */
+  .table-row {
+    @apply hover:bg-primary-50/50 transition-colors duration-200;
+  }
+
+  /* Modal Backdrop */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in;
+  }
+
+  .modal-content {
+    @apply bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/30 animate-slide-up max-w-md w-full;
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -400% 0;
+    }
+    100% {
+      background-position: 400% 0;
+    }
+  }
+
+  /* Scrollbar Styles */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(203 213 225) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgb(203 213 225);
+    border-radius: 9999px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgb(148 163 184);
+  }
+
+  /* Mobile Responsive Utilities */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .mobile-card {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .mobile-button {
+    @apply px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base;
+  }
+
+  /* Touch-friendly interactions */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Safe areas for mobile devices */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Mobile navigation adjustments */
+  .mobile-nav {
+    @apply h-16 sm:h-20;
+  }
+
+  .mobile-nav-item {
+    @apply px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm lg:text-base;
+  }
+
+  /* Mobile-optimized animations */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-bounce-in,
+    .animate-slide-up,
+    .animate-fade-in,
+    .animate-pulse {
+      animation: none;
+    }
+  }
+
+  /* Mobile viewport fixes */
+  @supports (-webkit-touch-callout: none) {
+    .ios-fix {
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+  }
+}

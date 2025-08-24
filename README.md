@@ -6,7 +6,7 @@ Aplikasi Vending Machine modern yang dibangun dengan Next.js App Router, Tailwin
 
 - **Halaman Utama Vending Machine** - Pilih produk dan masukkan uang untuk melakukan pembelian
 - **Panel Admin** - CRUD produk dengan validasi form menggunakan react-hook-form + yup
-- **Riwayat Transaksi** - Lihat semua transaksi dengan statistik dan export ke CSV
+- **Riwayat Transaksi** - Lihat semua transaksi dengan statistik
 - **Database MySQL** - Menggunakan Prisma ORM untuk manajemen database
 - **Responsif** - Design mobile-friendly dengan Tailwind CSS
 
@@ -148,9 +148,8 @@ jsm-feDev-test/
 ### Riwayat Transaksi (/history)
 
 1. Lihat semua transaksi yang telah dilakukan
-2. Export data ke CSV
-3. Hapus semua riwayat transaksi
-4. Lihat statistik pendapatan
+2. Hapus semua riwayat transaksi
+3. Lihat statistik pendapatan
 
 ## 📊 Database Schema
 

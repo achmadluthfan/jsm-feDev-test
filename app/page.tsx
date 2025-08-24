@@ -294,40 +294,6 @@ export default function VendingMachinePage() {
               onInsertMoney={handleInsertMoney}
               onReturnMoney={handleReturnMoney}
             />
-
-            {/* Instructions */}
-            <div className="mt-6 glass-card p-6">
-              <h3 className="text-lg font-semibold text-secondary-800 mb-4 flex items-center">
-                <span className="text-2xl mr-2">💡</span>
-                How to Use
-              </h3>
-              <div className="space-y-3 text-sm text-secondary-600">
-                <div className="flex items-center space-x-3">
-                  <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold">
-                    1
-                  </span>
-                  <span>Insert money using the denomination buttons</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold">
-                    2
-                  </span>
-                  <span>Select your desired product</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold">
-                    3
-                  </span>
-                  <span>Confirm your purchase</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-xs font-bold">
-                    4
-                  </span>
-                  <span>Collect your change if any</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

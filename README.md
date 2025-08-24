@@ -1,6 +1,10 @@
 # 🥤 Vending Machine App
 
-Aplikasi Vending Machine modern yang dibangun dengan Next.js App Router, Tailwind CSS, dan MySQL menggunakan Prisma ORM.
+Aplikasi Vending Machine yang dibangun dengan Next.js App Router, Tailwind CSS, dan MySQL menggunakan Prisma ORM.
+
+<img width="1435" height="811" alt="image" src="https://github.com/user-attachments/assets/132e07c1-253b-4bd8-97a5-3fb663ff3ed3" />
+<img width="1433" height="807" alt="image" src="https://github.com/user-attachments/assets/f4d39bfd-0735-495a-8273-5095b731bead" />
+<img width="1434" height="805" alt="image" src="https://github.com/user-attachments/assets/6b83a17b-3bf2-4f0e-9211-96638fd917ba" />
 
 ## ✨ Fitur
 

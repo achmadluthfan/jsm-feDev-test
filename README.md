@@ -103,31 +103,32 @@ Aplikasi akan berjalan di [http://localhost:3000](http://localhost:3000)
 
 ## 📁 Struktur Project
 
-\`\`\`
+```
 jsm-feDev-test/
-├── app/ # Next.js App Router
-│ ├── admin/ # Panel admin untuk CRUD produk
-│ ├── api/ # API routes
-│ │ ├── products/ # CRUD produk
-│ │ └── transactions/ # CRUD transaksi
-│ ├── history/ # Riwayat transaksi
-│ ├── globals.css # Global styles
-│ ├── layout.tsx # Root layout
-│ └── page.tsx # Halaman utama vending machine
-├── components/ # Komponen reusable
-│ ├── AdminForm.tsx # Form admin dengan validasi
-│ ├── HistoryTable.tsx # Tabel riwayat transaksi
-│ ├── MoneyInput.tsx # Input uang
-│ ├── ProductCard.tsx # Card produk
-│ └── PurchaseModal.tsx # Modal konfirmasi pembelian
-├── lib/ # Utilities
-│ └── prisma.ts # Prisma client configuration
-├── prisma/ # Database schema & seeds
-│ ├── schema.prisma # Schema database
-│ └── seed.ts # Data seeding
-├── types/ # TypeScript definitions
+├── app/                    # Next.js App Router
+│   ├── admin/             # Panel admin untuk CRUD produk
+│   ├── api/               # API routes
+│   │   ├── products/      # CRUD produk
+│   │   └── transactions/  # CRUD transaksi
+│   ├── history/           # Riwayat transaksi
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Halaman utama vending machine
+├── components/            # Komponen reusable
+│   ├── AdminForm.tsx      # Form admin dengan validasi
+│   ├── HistoryTable.tsx   # Tabel riwayat transaksi
+│   ├── MoneyInput.tsx     # Input uang
+│   ├── ProductCard.tsx    # Card produk
+│   └── PurchaseModal.tsx  # Modal konfirmasi pembelian
+├── lib/                   # Utilities
+│   └── prisma.ts          # Prisma client configuration
+├── prisma/                # Database schema & seeds
+│   ├── schema.prisma      # Schema database
+│   └── seed.ts            # Data seeding
+├── types/                 # TypeScript definitions
+│   └── index.ts
 └── README.md
-\`\`\`
+```
 
 ## 🎯 Cara Penggunaan
 
@@ -213,7 +214,7 @@ npm run db:seed
 
 \`\`\`bash
 
-# Jalankan di port lain
+#### Jalankan di port lain
 
 PORT=3001 npm run dev
 \`\`\`
